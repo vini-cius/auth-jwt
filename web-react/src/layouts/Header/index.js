@@ -18,7 +18,7 @@ export default function Header() {
 	]
 
 	function handleToggleMenu() {
-		document.body.style.overflow = toggleMenu ? "hidden" : "initial"
+		document.body.style.overflow = toggleMenu ? "initial" : "hidden";
 
 		document.querySelector(".menu-toggle")
 			.setAttribute("aria-pressed", toggleMenu ? "false" : "true");
@@ -29,12 +29,11 @@ export default function Header() {
 	return (
 		<Head>
 			<Container>
-				<Link to="/">
+				<Link to="/" className="logo">
 					<GiCoffeeCup
 						size={40}
 						color="#FFFFFF"
 						role="img"
-						className="logo"
 					/>
 				</Link>
 

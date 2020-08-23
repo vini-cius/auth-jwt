@@ -6,11 +6,9 @@ export const PageWrapper = styled.div`
 `;
 
 export const PageContent = styled.main`
-	width: 100%;
-	height: 100%;
-
 	background: ${props => props.theme.color_box_base};
-	margin: auto;
+	margin: 0 auto;
+	min-height: 100%;
 
 	@media (min-width: 700px) {
 		max-width: 1100px;

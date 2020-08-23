@@ -7,7 +7,7 @@ import serviceImg from '~/assets/services.svg';
 export default function Home() {
 	return (
 		<HomePage>
-			<h1 className="title">Bem-vindo, <br/> Vinicius !</h1>
+			<h1 className="title">Bem-vindo, <br /> Vinicius !</h1>
 
 			<img
 				src={serviceImg}
@@ -20,6 +20,24 @@ export default function Home() {
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa totam mollitia
 					cupiditate quisquam aliquam a quos iste ex porro voluptates! Ullam repudiandae
 					consectetur inventore quae iusto suscipit expedita.
+				</p>
+				<br />
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa totam mollitia
+					cupiditate quisquam aliquam a quos iste ex porro voluptates! Ullam repudiandae
+					consectetur inventore quae iusto suscipit expedita ex beatae!.
+				</p>
+				<br />
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa totam mollitia
+					cupiditate quisquam aliquam a quos iste ex porro voluptates! Ullam repudiandae
+					consectetur inventore quae iusto suscipit expedita ex beatae!.
+				</p>
+				<br />
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa totam mollitia
+					cupiditate quisquam aliquam a quos iste ex porro voluptates! Ullam repudiandae
+					consectetur inventore quae iusto suscipit expedita ex beatae!.
 				</p>
 				<br />
 				<p>
