@@ -9,9 +9,11 @@ const authMiddleware = (req: Request, res: Response, next: NextFunction) => {
 	const token = authHeader.replace('Bearer', '').trim();
 
 	try {
-		const payload = jwt.verify(token, process.env.APP_SECRET);
+		jwt.verify(token, process.env.APP_SECRET, (error, decoded) => {
+			if (error) return res.status(500).json({ auth: false, message: 'Failed to authenticate'});
 
-		req.userId = payload.userId;
+			req.userId = (<any>decoded).id;
+		});
 
 		return next();
 

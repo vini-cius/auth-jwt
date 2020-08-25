@@ -27,8 +27,8 @@
 			"@models/*": [
 				"./src/models/*"
 			],
-			"@views/*": [
-				"./src/views/*"
+			"@middlewares/*": [
+				"./src/middlewares/*"
 			],
 			"@config/*": [
 				"./src/config/*"
