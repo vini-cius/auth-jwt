@@ -1,11 +1,9 @@
-import { lazy } from 'react';
-
-const Home = lazy(() => import('../pages/Home'));
-const Contact = lazy(() => import('../pages/Contact'));
+import Home from '../pages/Home';
+import Contact from '../pages/Contact';
 
 const routes = [
 	{ path: '/', exact: true, component: Home },
-	{ path: '/contact', exact: true, component: Contact },
+	{ path: '/contact', component: Contact },
 ];
 
 export default routes;

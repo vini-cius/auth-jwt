@@ -1,39 +1,31 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Switch, RouteProps } from 'react-router-dom';
 
-const Login = lazy(() => import('../pages/Login'));
-const ForgotPass  = lazy(() => import('../pages/ForgotPass'));
-const Layout = lazy(() => import('../layouts/Default'));
+import Login from '../pages/Login';
+import ForgotPass from '../pages/ForgotPass';
+import Layout from '../layouts/Default';
 
 const Routes: React.FC = () => {
-	const loading = () => (
-		<div>
-			<strong>Loading...</strong>
-		</div>
-	);
-
 	return (
 		<BrowserRouter>
-			<Suspense fallback={loading()}>
-				<Switch>
-					<Route
-						exact
-						path="/login"
-						render={(props: RouteProps) => <Login {...props} />}
-					/>
+			<Switch>
+				<Route
+					exact
+					path="/login"
+					render={(props: RouteProps) => <Login {...props} />}
+				/>
 
-					<Route
-						exact
-						path="/forgot"
-						render={(props: RouteProps) => <ForgotPass {...props} />}
-					/>
+				<Route
+					exact
+					path="/forgot"
+					render={(props: RouteProps) => <ForgotPass {...props} />}
+				/>
 
-					<Route
-						path="/"
-						render={(props: RouteProps) => <Layout {...props} />}
-					/>
-				</Switch>
-			</Suspense>
+				<Route
+					path="/"
+					render={(props: RouteProps) => <Layout {...props} />}
+				/>
+			</Switch>
 		</BrowserRouter>
 	);
 }
