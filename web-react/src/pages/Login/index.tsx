@@ -4,7 +4,7 @@ import { GiCoffeeCup } from "react-icons/gi";
 import { BsEyeFill, BsEyeSlashFill } from 'react-icons/bs';
 import { FiLogIn } from 'react-icons/fi';
 
-import GlobalStyle from '~/styles/global';
+import GlobalStyle from '../../styles/global';
 import {
 	PageLogin,
 	ContainerLogin,
@@ -16,7 +16,7 @@ import {
 	Footer
 } from './styles';
 
-export default function Login() {
+const Login: React.FC = () => {
 	const [ showPass, setShowPass ] = useState(false);
 	const [ cpfCnpj, setCpfCnpj ] = useState('');
 	const [ password, setPassword ] = useState('');
@@ -97,3 +97,5 @@ export default function Login() {
 		</>
 	);
 }
+
+export default Login;

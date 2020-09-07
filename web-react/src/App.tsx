@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Theme from '~/styles/theme';
-import Routes from '~/routes';
+import Theme from './styles/theme';
+import Routes from './routes';
 
 import 'react-toastify/dist/ReactToastify.css';
 

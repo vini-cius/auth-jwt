@@ -10,7 +10,7 @@ export const HomePage = styled.div`
 
 	.title {
 		align-self: flex-start;
-		color: ${props => props.theme.color_title};
+		color: ${props => props.theme.colors.title};
 	}
 
 	.service-img {
@@ -21,7 +21,7 @@ export const HomePage = styled.div`
 
 	article p {
 		font-size: 1.8rem;
-		color: ${props => props.theme.color_text_base};
+		color: ${props => props.theme.colors.text_base};
 		text-align: justify;
 	}
 

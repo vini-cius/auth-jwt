@@ -7,8 +7,8 @@ import {
 	Head, Container, ButtonExit, MenuSection
 } from './styles';
 
-export default function Header() {
-	const [toggleMenu, setToggleMenu] = useState(false);
+const Header: React.FC = () => {
+	const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 
 	const navItems = [
 		{ name: 'Contact', link: '/contact' },
@@ -20,7 +20,7 @@ export default function Header() {
 	function handleToggleMenu() {
 		document.body.style.overflow = toggleMenu ? "initial" : "hidden";
 
-		document.querySelector(".menu-toggle")
+		document.querySelector(".menu-toggle")!
 			.setAttribute("aria-pressed", toggleMenu ? "false" : "true");
 
 		setToggleMenu(!toggleMenu);
@@ -67,3 +67,5 @@ export default function Header() {
 		</Head>
 	);
 }
+
+export default Header;

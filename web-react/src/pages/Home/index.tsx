@@ -2,9 +2,9 @@ import React from 'react';
 
 import { HomePage } from './styles';
 
-import serviceImg from '~/assets/services.svg';
+import serviceImg from '../../assets/services.svg';
 
-export default function Home() {
+const Home: React.FC = () => {
 	return (
 		<HomePage>
 			<h1 className="title">Bem-vindo, <br /> Vinicius !</h1>
@@ -49,3 +49,5 @@ export default function Home() {
 		</HomePage>
 	);
 }
+
+export default Home;

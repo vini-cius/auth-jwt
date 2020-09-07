@@ -22,7 +22,7 @@ export default createGlobalStyle`
 
   body {
     color: #333;
-		background-color: ${props => props.theme.color_background};
+		background-color: ${props => props.theme.colors.background};
   }
 
 	body, input, button, textarea {

@@ -1,10 +1,14 @@
 import styled, { css } from 'styled-components';
 
+interface MenuProps {
+	toggle: boolean;
+};
+
 export const Head = styled.header`
  	display: flex;
   flex-direction: column;
-	background-color: ${props => props.theme.color_primary};
-	color: ${props => props.theme.color_text_in_primary};
+	background-color: ${props => props.theme.colors.primary};
+	color: ${props => props.theme.colors.text_in_primary};
 	margin: auto;
 
 	@media (min-width: 700px) {
@@ -42,7 +46,7 @@ export const ButtonExit = styled.button`
 	}
 `;
 
-export const MenuSection = styled.div`
+export const MenuSection = styled.div<MenuProps>`
 	nav ul {
 		display: flex;
 	}
@@ -52,7 +56,7 @@ export const MenuSection = styled.div`
 
 		font-size: 1.4rem;
 		font-weight: bold;
-		color: ${props => props.theme.color_text_in_primary};
+		color: ${props => props.theme.colors.text_in_primary};
 
 		padding: 2.4rem;
 		cursor: pointer;
@@ -64,11 +68,11 @@ export const MenuSection = styled.div`
 		}
 
 		&:visited {
-			color: ${props => props.theme.color_text_in_primary};
+			color: ${props => props.theme.colors.text_in_primary};
 		}
 
 		&:active {
-			color: ${props => props.theme.color_primary_dark};
+			color: ${props => props.theme.colors.primary_dark};
 		}
 
 		@media (min-width: 620px) {
@@ -91,7 +95,7 @@ export const MenuSection = styled.div`
         height: 0.5rem;
         width: 100%;
         margin: 0.6rem auto;
-				background: ${props => props.theme.color_text_in_primary};
+				background: ${props => props.theme.colors.text_in_primary};
 				border-radius: 0.3rem;
 
         transition-duration: 0.3s;
@@ -107,7 +111,7 @@ export const MenuSection = styled.div`
 			width: 100vw;
 			height: 100vh;
 
-			background-color: ${props => props.theme.color_primary};
+			background-color: ${props => props.theme.colors.primary};
 
 			z-index: 10;
 

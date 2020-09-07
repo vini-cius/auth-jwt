@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { GiCoffeeCup } from 'react-icons/gi';
 
-import GlobalStyle from '~/styles/global';
+import GlobalStyle from '../../styles/global';
 import {
 	PageForgot,
 	ContainerForgot,
@@ -9,7 +9,7 @@ import {
 	ButtonSend
 } from './styles';
 
-export default function ForgotPass() {
+const ForgotPass: React.FC = () => {
 	const [email, setEmail] = useState('');
 
 	function handleRequestPass(e){
@@ -51,3 +51,5 @@ export default function ForgotPass() {
 		</>
 	);
 }
+
+export default ForgotPass;
