@@ -1,14 +1,14 @@
 import React, { Suspense, lazy } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, RouteProps } from 'react-router-dom';
 
-import GlobalStyle from '~/styles/global';
+import GlobalStyle from '../../styles/global';
 import { PageWrapper, PageContent } from './styles';
 
-import routes from '~/routes/treeRoutes.js';
+import routes from '../../routes/treeRoutes';
 
 const Header = lazy(() => import('../Header'));
 
-export default function Default() {
+const Default: React.FC = () => {
 	const loading = () => (
 		<div>
 			<strong>Loading...</strong>
@@ -31,8 +31,7 @@ export default function Default() {
 										key={index}
 										path={route.path}
 										exact={route.exact}
-										name={route.name}
-										render={props => <route.component {...props} />}
+										render={(props: RouteProps) => <route.component {...props} />}
 									/>
 								)
 								: null;
@@ -45,3 +44,5 @@ export default function Default() {
 		</>
 	);
 }
+
+export default Default;

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import Input from '~/components/Input';
+import Input from '../../components/Input';
 
 export const PageForgot = styled.div`
   width: 100vw;
@@ -9,7 +9,7 @@ export const PageForgot = styled.div`
   justify-content: center;
 	align-items: center;
 
-	background: ${props => props.theme.color_background};
+	background: ${props => props.theme.colors.background};
 	overflow: hidden;
 `;
 
@@ -26,7 +26,7 @@ export const ContainerForgot = styled.div`
 	padding: 0 3rem;
 	margin: 4rem;
 
-  background: ${props => props.theme.color_box_base};
+  background: ${props => props.theme.colors.box_base};
   border-radius: 0.4rem;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
 
@@ -54,13 +54,13 @@ export const ContainerForgot = styled.div`
 		}
 
 		h1 {
-			color: ${props => props.theme.color_title};
+			color: ${props => props.theme.colors.title};
 			align-self: flex-start;
 			margin-bottom: 1.2rem;
 		}
 
 		h2 {
-			color: ${props => props.theme.color_text_light};
+			color: ${props => props.theme.colors.text_light};
 			font-size: 1.7rem;
 			align-self: flex-start;
 			margin-bottom: 4rem;
@@ -86,13 +86,13 @@ export const InputEmail = styled(Input)`
 		bottom: 1.4rem;
 		left: 0;
 		font-size: 1.2rem;
-		color: ${props => props.theme.color_text_light};
+		color: ${props => props.theme.colors.text_light};
 		transition: all 0.2s;
 	}
 
 	input {
 		border: none;
-		border-bottom: 0.2rem solid ${props => props.theme.color_line_in_white};
+		border-bottom: 0.2rem solid ${props => props.theme.colors.line_in_white};
 		border-radius: 0;
 		background: transparent !important;
 		padding: 0;
@@ -126,11 +126,11 @@ export const ButtonSend = styled.button`
 	font-size: 1.5rem;
 	font-weight: bold;
 
-	color: ${props => props.theme.color_button_text};
+	color: ${props => props.theme.colors.button_text};
 	background: linear-gradient(
 		to right,
-		${props => props.theme.color_primary},
-		${props => props.theme.color_primary_dark}
+		${props => props.theme.colors.primary},
+		${props => props.theme.colors.primary_dark}
 	);
 
 	border-radius: 0.8rem;

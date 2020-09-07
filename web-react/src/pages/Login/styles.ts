@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
-import Input from '~/components/Input';
+import Input from '../../components/Input';
 
 export const PageLogin = styled.div`
   width: 100vw;
@@ -10,7 +10,7 @@ export const PageLogin = styled.div`
   justify-content: center;
 	align-items: center;
 
-	background: ${props => props.theme.color_background};
+	background: ${props => props.theme.colors.background};
 	overflow: hidden;
 `;
 
@@ -27,7 +27,7 @@ export const ContainerLogin = styled.div`
 	padding: 0 3rem;
 	margin: 4rem;
 
-  background: ${props => props.theme.color_box_base};
+  background: ${props => props.theme.colors.box_base};
   border-radius: 0.4rem;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
 
@@ -48,7 +48,7 @@ export const ContainerLogin = styled.div`
 	}
 
 	.title {
-		color: ${props => props.theme.color_title};
+		color: ${props => props.theme.colors.title};
 		font-size: 2.6rem;
 		text-align: center;
 		font-weight: 500;
@@ -74,13 +74,13 @@ export const InputLogin = styled(Input)`
 		bottom: 1.2rem;
 		left: 0;
 		font-size: 1.4rem;
-		color: ${props => props.theme.color_text_light};
+		color: ${props => props.theme.colors.text_light};
 		transition: all 0.2s;
 	}
 
 	input {
 		border: none;
-		border-bottom: 0.2rem solid ${props => props.theme.color_line_in_white};
+		border-bottom: 0.2rem solid ${props => props.theme.colors.line_in_white};
 		border-radius: 0;
 		background: transparent;
 		padding: 0;
@@ -108,7 +108,7 @@ export const InputLogin = styled(Input)`
 
 export const ShowPass = styled.span`
 	font-size: 1.5rem;
-  color: ${props => props.theme.color_text_light};
+  color: ${props => props.theme.colors.text_light};
 
   display: flex;
   align-items: center;
@@ -120,7 +120,7 @@ export const ShowPass = styled.span`
 	transition: all 0.4s;
 
 	&:hover {
-		color: ${props => props.theme.color_primary};
+		color: ${props => props.theme.colors.primary};
 		font-size: 18px;
 	}
 
@@ -136,11 +136,11 @@ export const BtnLogin = styled.button`
 	font-size: 1.5rem;
 	font-weight: bold;
 
-	color: ${props => props.theme.color_button_text};
+	color: ${props => props.theme.colors.button_text};
 	background: linear-gradient(
 		to right,
-		${props => props.theme.color_primary},
-		${props => props.theme.color_primary_dark}
+		${props => props.theme.colors.primary},
+		${props => props.theme.colors.primary_dark}
 	);
 
 	border-radius: 0.8rem;
@@ -172,7 +172,7 @@ export const ForgotPass = styled.div`
 `;
 
 export const ForgotPassLink = styled(Link)`
-	color: ${props => props.theme.color_primary};
+	color: ${props => props.theme.colors.primary};
 	font-weight: 500;
 
 	&:hover {
@@ -185,6 +185,6 @@ export const Footer = styled.footer`
   bottom: 20px;
 
 	p {
-		color: ${props => props.theme.color_text_light};
+		color: ${props => props.theme.colors.text_light};
 	}
 `;

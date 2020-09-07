@@ -6,7 +6,7 @@ export const PageWrapper = styled.div`
 `;
 
 export const PageContent = styled.main`
-	background: ${props => props.theme.color_box_base};
+	background: ${props => props.theme.colors.box_base};
 	margin: 0 auto;
 	min-height: 100%;
 

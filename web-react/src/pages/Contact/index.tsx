@@ -2,8 +2,10 @@ import React from 'react';
 
 //import { Container } from './styles';
 
-export default function Contact() {
+const Contact: React.FC = () => {
 	return (
 		<h1>This is a private route.</h1>
 	);
 }
+
+export default Contact;

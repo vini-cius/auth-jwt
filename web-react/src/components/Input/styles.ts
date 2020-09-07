@@ -11,7 +11,7 @@ export const InputBlock = styled.div`
 		width: calc(100% - 3.2rem);
 		height: 2px;
 		content: '';
-		background: ${({ theme }) => theme.color_primary_light};
+		background: ${({ theme }) => theme.colors.primary_light};
 		position: absolute;
 		left: 1.6rem;
 		right: 1.6rem;
@@ -26,18 +26,18 @@ export const InputBlock = styled.div`
 		width: 100%;
 		height: 4.5rem;
 
-		border: 1px solid ${({ theme }) => theme.color_line_in_white};
+		border: 1px solid ${({ theme }) => theme.colors.line_in_white};
 		border-radius: 0.8rem;
 		outline: 0;
 
 		font: 400 1.6rem;
 
-		background: ${({ theme }) => theme.color_input_background};
+		background: ${({ theme }) => theme.colors.input_background};
 		margin-top: 0.8rem;
 	  padding: 0 1.6rem;
 
 		::placeholder {
-			color: ${({ theme }) => theme.color_text_light};
+			color: ${({ theme }) => theme.colors.text_light};
 		}
 	}
 `;
