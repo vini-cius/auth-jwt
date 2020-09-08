@@ -44,6 +44,12 @@ export const ContainerForgot = styled.div`
 		@media(min-width: 700px) {
 			margin-bottom: 5em;
 		}
+
+		svg {
+			width: 80px;
+			height: 80px;
+			fill: ${props => props.theme.colors.primary_dark};
+		}
 	}
 
 	.title {
@@ -90,6 +96,11 @@ export const InputEmail = styled(Input)`
 		transition: all 0.2s;
 	}
 
+	&:focus-within::after {
+		width: 0;
+		height: 0;
+	}
+
 	input {
 		border: none;
 		border-bottom: 0.2rem solid ${props => props.theme.colors.line_in_white};
@@ -98,11 +109,11 @@ export const InputEmail = styled(Input)`
 		padding: 0;
 
 		&:focus {
-			border-color: transparent !important;
+			border-color: ${props => props.theme.colors.primary};
 
 			& + .label-email {
 				font-size: 1.2rem;
-				top: 0.4rem;
+				top: 0.1rem;
 			}
 		}
 
@@ -111,7 +122,7 @@ export const InputEmail = styled(Input)`
 			?	css`
 				& + .label-email {
 					font-size: 1.2rem;
-					top: 0.4rem;
+					top: 0.1rem;
 				}
 			`
 			: ''

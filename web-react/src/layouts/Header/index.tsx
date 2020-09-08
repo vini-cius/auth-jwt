@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaPowerOff } from 'react-icons/fa';
-import { GiCoffeeCup } from 'react-icons/gi';
 
 import {
 	Head, Container, ButtonExit, MenuSection
 } from './styles';
+
+import { ReactComponent as CoffeeIcon } from '../../assets/icons/coffee-cup.svg';
+import { ReactComponent as PowerIcon } from '../../assets/icons/power.svg';
 
 const Header: React.FC = () => {
 	const [toggleMenu, setToggleMenu] = useState<boolean>(false);
@@ -15,7 +16,7 @@ const Header: React.FC = () => {
 		{ name: 'Service', link: '/service' },
 		{ name: 'Chat', link: '/chat' },
 		{ name: 'Profile', link: '/profile' },
-	]
+	];
 
 	function handleToggleMenu() {
 		document.body.style.overflow = toggleMenu ? "initial" : "hidden";
@@ -30,11 +31,7 @@ const Header: React.FC = () => {
 		<Head>
 			<Container>
 				<Link to="/" className="logo">
-					<GiCoffeeCup
-						size={40}
-						color="#FFFFFF"
-						role="img"
-					/>
+					<CoffeeIcon />
 				</Link>
 
 				<MenuSection toggle={toggleMenu}>
@@ -61,7 +58,7 @@ const Header: React.FC = () => {
 				</MenuSection>
 
 				<ButtonExit aria-label="Sair">
-					<FaPowerOff size={25} color="#fff" />
+					<PowerIcon />
 				</ButtonExit>
 			</Container>
 		</Head>

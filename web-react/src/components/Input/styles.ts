@@ -8,10 +8,10 @@ export const InputBlock = styled.div`
 	}
 
 	&:focus-within::after {
-		width: calc(100% - 3.2rem);
+		width: calc(100% + 3.2rem);
 		height: 2px;
 		content: '';
-		background: ${({ theme }) => theme.colors.primary_light};
+		background: ${props => props.theme.colors.primary_light};
 		position: absolute;
 		left: 1.6rem;
 		right: 1.6rem;
@@ -26,18 +26,18 @@ export const InputBlock = styled.div`
 		width: 100%;
 		height: 4.5rem;
 
-		border: 1px solid ${({ theme }) => theme.colors.line_in_white};
+		border: 1px solid ${props => props.theme.colors.line_in_white};
 		border-radius: 0.8rem;
 		outline: 0;
 
 		font: 400 1.6rem;
 
-		background: ${({ theme }) => theme.colors.input_background};
+		background: ${props => props.theme.colors.input_background};
 		margin-top: 0.8rem;
 	  padding: 0 1.6rem;
 
 		::placeholder {
-			color: ${({ theme }) => theme.colors.text_light};
+			color: ${props => props.theme.colors.text_light};
 		}
 	}
 `;

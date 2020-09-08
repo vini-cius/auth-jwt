@@ -20,9 +20,8 @@ export const ContainerLogin = styled.div`
 	justify-content: center;
 	flex-direction: column;
 
-	width: 100%;
-  min-width: 36rem;
-	height: 100%;
+	min-width: 100%;
+	min-height: 100%;
 
 	padding: 0 3rem;
 	margin: 4rem;
@@ -33,8 +32,8 @@ export const ContainerLogin = styled.div`
 
 	overflow: hidden;
 
-	@media(min-width: 700px) {
-		max-width: 560px;
+	@media(min-width: 600px) {
+		min-width: 56rem;
 	}
 
 	.logo {
@@ -44,6 +43,12 @@ export const ContainerLogin = styled.div`
 
 		@media(min-width: 700px) {
 			margin-bottom: 3.5rem;
+		}
+
+		svg {
+			width: 8rem;
+			height: 8rem;
+			fill: ${props => props.theme.colors.primary_dark};
 		}
 	}
 
@@ -78,6 +83,11 @@ export const InputLogin = styled(Input)`
 		transition: all 0.2s;
 	}
 
+	&:focus-within::after {
+		width: 0;
+		height: 0;
+	}
+
 	input {
 		border: none;
 		border-bottom: 0.2rem solid ${props => props.theme.colors.line_in_white};
@@ -86,30 +96,26 @@ export const InputLogin = styled(Input)`
 		padding: 0;
 
 		&:focus {
-			border-color: transparent !important;
+			border-color: ${props => props.theme.colors.primary};
 
 			& + .label-login {
 				font-size: 1.2rem;
-				top: 0.4rem;
+				top: 0.1rem;
 			}
 		}
 
-		${
-			props => props.value !== ''
+		${props => props.value !== ''
 			? css`
-				& + .label-login {
-					font-size: 1.2rem;
-					top: 0.4rem;
-				}`
+					& + .label-login {
+						font-size: 1.2rem;
+						top: 0.1rem;
+					}`
 			: ''
 		}
 	}
 `;
 
 export const ShowPass = styled.span`
-	font-size: 1.5rem;
-  color: ${props => props.theme.colors.text_light};
-
   display: flex;
   align-items: center;
   position: absolute;
@@ -120,12 +126,11 @@ export const ShowPass = styled.span`
 	transition: all 0.4s;
 
 	&:hover {
-		color: ${props => props.theme.colors.primary};
-		font-size: 18px;
-	}
-
-	@media(min-width: 700px) {
-		font-size: 2rem;
+		svg {
+			fill: ${props => props.theme.colors.primary};
+			width: 2rem;
+			height: 2rem;
+		}
 	}
 `;
 
@@ -169,6 +174,11 @@ export const BtnLogin = styled.button`
 export const ForgotPass = styled.div`
 	text-align: center;
 	padding-top: 4rem;
+
+	@media(max-width: 320px){
+		padding-top: 2rem;
+		margin-bottom: 1rem;
+	}
 `;
 
 export const ForgotPassLink = styled(Link)`

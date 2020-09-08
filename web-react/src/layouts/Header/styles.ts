@@ -30,6 +30,13 @@ export const Container = styled.div`
 			display: none;
 		}
 	}
+
+	.logo svg {
+		width: 40px;
+		height: 40px;
+
+		fill: #FFFFFF;
+	}
 `;
 
 export const ButtonExit = styled.button`
@@ -43,6 +50,11 @@ export const ButtonExit = styled.button`
 
 	&:hover {
 		font-size: 1.8rem;
+	}
+
+	svg {
+		width: 26px;
+		height: 26px;
 	}
 `;
 

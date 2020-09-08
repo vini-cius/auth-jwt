@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { GiCoffeeCup } from 'react-icons/gi';
+import React, { useState, FormEvent, ChangeEvent } from 'react';
 
 import GlobalStyle from '../../styles/global';
 import {
@@ -9,10 +8,12 @@ import {
 	ButtonSend
 } from './styles';
 
+import { ReactComponent as CoffeeIcon } from '../../assets/icons/coffee-cup.svg';
+
 const ForgotPass: React.FC = () => {
 	const [email, setEmail] = useState('');
 
-	function handleRequestPass(e){
+	function handleRequestPass(e: FormEvent) {
 		e.preventDefault();
 	}
 
@@ -22,8 +23,8 @@ const ForgotPass: React.FC = () => {
 
 			<PageForgot>
 				<ContainerForgot>
-					<div className="logo">
-						<GiCoffeeCup size={60} color="#4538A4" />
+					<div className="logo" aria-label="Coffee">
+						<CoffeeIcon role="img"/>
 					</div>
 
 					<div className="title">
@@ -36,12 +37,12 @@ const ForgotPass: React.FC = () => {
 							name="email"
 							label=""
 							value={email}
-							onChange={e => { setEmail(e.target.value) }}
+							onChange={(e: ChangeEvent<HTMLInputElement>) => { setEmail(e.target.value) }}
 							required
 						>
 							<span className="label-email">
 								E-mail
-						</span>
+							</span>
 						</InputEmail>
 
 						<ButtonSend>Enviar</ButtonSend>
